@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mywebapp
+  name: Hello-demo
 spec:
   replicas: 1
   template:
     spec: # Pod spec
       containers:
       - name: mycontainer
-        image: "devopsjourney1/mywebapp:latest"
+        image: "662792376110.dkr.ecr.us-east-1.amazonaws.com/demo/20-10"
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         envFrom:
         - configMapRef:
             name: mykustom-map
