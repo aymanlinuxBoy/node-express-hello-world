@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: hello-demo
 spec:
+  imagePullSecrets:
+    - name: ecr-registry-secret
   replicas: 1
   template:
     spec: # Pod spec
